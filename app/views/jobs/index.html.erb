@@ -1,19 +1,15 @@
-<div class="container-fluid">
-
-<%= link_to 'Post a job', new_job_path %>
-
 <h1>Recent Jobs</h1>
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-  </tr>
- 
+<!--   <div class="row">
+    <div class="col-md-3">Title</div>
+    <div class="col-md-9">Description</div>
+  </div>
+  -->
   <% @jobs.each do |job| %>
-    <tr>
-      <td><a href = 'jobs/<%= job.id %>'><%= job.title %></a></td>
-      <td><%= job.description %></td>
-    </tr>
-  <% end %>
-</table>
+
+  <div class="row">
+    <div class="col-md-3"><a href = 'jobs/<%= job.id %>'><%= job.title %></a></div>
+    <div class="col-md-9"><%= job.description.split.first(30).join(' ') %> (<a href = 'jobs/<%= job.id %>'>...</a>)</div>
+  </div>
+
+<% end %>
