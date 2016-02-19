@@ -15,9 +15,11 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  resources :jobs
+  resources :users, only: [:new, :create] do
+     resources :jobs
+  end
 
-  resources :users, only: [:new, :create]
+  resources :jobs
 
   resources :sessions, only: [:new, :create, :destroy]
 

@@ -5,16 +5,20 @@ class JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    @user = User.find(@job.user_id)
   end
 
   def new
+    @user = User.find(current_user.id)
+    @job = @user.jobs.build
   end
 
   def edit
   end
 
   def create
-     @job = Job.new(strong_params)
+    @job = Job.new(strong_params)
+    @job.user_id = current_user.id
  
     @job.save
     redirect_to @job
