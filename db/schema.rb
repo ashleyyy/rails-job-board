@@ -17,9 +17,13 @@ ActiveRecord::Schema.define(version: 20160218210528) do
     t.string   "title"
     t.string   "company"
     t.string   "location"
+    t.string   "salary"
+    t.string   "hours_per_week"
+    t.string   "duration"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "qualifications"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

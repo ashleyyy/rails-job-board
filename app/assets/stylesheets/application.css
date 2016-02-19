@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ = require_bootstrap
+
+.job-name {
+
+}
+
+.job-details {
+  margin-bottom: 1%
+}
+
+.job-description, .job-qualifications {
+  margin-top: 1%;
+
+}
+
+.caption {
+  display: inline-block;
+  font-weight: bold;
+  padding: 1%;
+  border: 1px solid black;
+  border-radius: 20%;
+}

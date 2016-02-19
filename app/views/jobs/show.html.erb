@@ -1,9 +1,48 @@
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @job.description %>
-</p>
+<%= link_to 'Back', jobs_path %>
+  <div class="well">
+
+    <p>
+      <h1 class="job-name"><%= @job.title %> at <%= @job.company %></h1>
+      <em>posted on <%= @job.created_at.strftime("%B %-d, %Y") %></em>
+    </p>
+    
+    <div class = "row job-details">
+      <div class="col-md-4">
+        <div class="caption">Hourly wage/salary:</div>
+          <%= @job.salary %>
+      </div>
+
+      <div class="col-md-4">
+        <div class="caption">Hours per week:</div>
+        <%= @job.hours_per_week %>
+      </div>
+
+      <div class="col-md-4">
+        <div class="caption">Duration:</div>
+        <%= @job.duration %>
+      </div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-6 job-description">
+        <div class="caption">About This Job:</div>
+        <%= @job.description %>
+      </div>
+
+<!--     </div>
+
+    <div class="row"> -->
+
+      <div class="col-md-6 job-qualifications">
+        <div class="caption">About You:</div>
+        <%= @job.qualifications %>
+      </div>
+
+    </div>
+
+    </div>
+      <div class="caption">How to Apply:</div>
+      <!--contact info for company here? -->
+    <div class="row">
+  </div>

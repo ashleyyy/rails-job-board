@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
   def index
+    @jobs = Job.all
   end
 
   def show
@@ -27,6 +28,6 @@ class JobsController < ApplicationController
 
   private
     def strong_params
-      params.require(:job).permit(:title, :company, :location, :description)
+      params.require(:job).permit(:title, :company, :location, :salary, :jobs_per_week, :duration, :qualifications, :description, :hours_per_week)
     end
 end

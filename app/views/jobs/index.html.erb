@@ -1,15 +1,15 @@
-<h1>Listing articles</h1>
+<h1>Recent Jobs</h1>
  
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-  </tr>
- 
+<!--   <div class="row">
+    <div class="col-md-3">Title</div>
+    <div class="col-md-9">Description</div>
+  </div>
+  -->
   <% @jobs.each do |job| %>
-    <tr>
-      <td><%= job.title %></td>
-      <td><%= job.description %></td>
-    </tr>
-  <% end %>
-</table>
+
+  <div class="row">
+    <div class="col-md-3"><a href = 'jobs/<%= job.id %>'><%= job.title %></a></div>
+    <div class="col-md-9"><%= job.description.split.first(30).join(' ') %> (<a href = 'jobs/<%= job.id %>'>...</a>)</div>
+  </div>
+
+<% end %>
