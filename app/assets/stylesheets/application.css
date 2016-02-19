@@ -29,7 +29,9 @@
 
 }
 
-strong {
+.caption {
+  display: inline-block;
+  font-weight: bold;
   padding: 1%;
   border: 1px solid black;
   border-radius: 20%;

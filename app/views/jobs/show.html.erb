@@ -9,25 +9,25 @@
     
     <div class = "row job-details">
       <div class="col-md-4">
-        <strong>Hourly wage/salary:</strong>
-        <%= @job.location %>
+        <div class="caption">Hourly wage/salary:</div>
+          <%= @job.salary %>
       </div>
 
       <div class="col-md-4">
-        <strong>Hours per week:</strong>
-        <%= @job.location %>
+        <div class="caption">Hours per week:</div>
+        <%= @job.hours_per_week %>
       </div>
 
       <div class="col-md-4">
-        <strong>Duration:</strong>
-        <%= @job.location %>
+        <div class="caption">Duration:</div>
+        <%= @job.duration %>
       </div>
     </div>
 
     <div class="row">
 
       <div class="col-md-6 job-description">
-        <strong>About This Job:</strong>
+        <div class="caption">About This Job:</div>
         <%= @job.description %>
       </div>
 
@@ -36,14 +36,14 @@
     <div class="row"> -->
 
       <div class="col-md-6 job-qualifications">
-        <strong>About You:</strong>
-        <%= @job.description %>
+        <div class="caption">About You:</div>
+        <%= @job.qualifications %>
       </div>
 
     </div>
 
     </div>
-      <strong>How to Apply:</strong>
+      <div class="caption">How to Apply:</div>
       <!--contact info for company here? -->
     <div class="row">
   </div>
