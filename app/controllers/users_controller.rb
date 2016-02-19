@@ -12,11 +12,12 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
 
-    protected
+  protected
 
-    def strong_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+  def strong_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
   end
 
 end
