@@ -1,4 +1,18 @@
-<%= form_for :job, url: jobs_path do |f| %>
+<h2>Write a job posting for <em><%= current_user.email %></em>.</h2>
+
+<%= form_for @job do |f| %>
+
+  <% if @job.errors.any? %>
+    <div>
+      <%= pluralize(@job.errors.count, "error") %> prevented the job from being saved:
+      <ul>
+        <% @job.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>

@@ -20,8 +20,11 @@ class JobsController < ApplicationController
     @job = Job.new(strong_params)
     @job.user_id = current_user.id
  
-    @job.save
-    redirect_to @job
+    if @job.save
+      redirect_to @job
+    else
+       render :new
+    end
   end
 
   def update
